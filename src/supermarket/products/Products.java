@@ -9,7 +9,7 @@ public abstract class Products {
 	
 	public static HashMap<String, Products> availableProducts = new HashMap<>();
 	
-	public Products() {
+	protected Products() {
 		
 	}
 
@@ -17,7 +17,7 @@ public abstract class Products {
 		this.quantity = quantity;
 	}
 
-	public Products(String name, double price, int quantity) {
+	protected Products(String name, double price, int quantity) {
 		super();
 		this.name = name.toLowerCase();
 		this.price = price;
@@ -41,6 +41,6 @@ public abstract class Products {
 		return  name + " " + price;
 	}
 	
-	public abstract boolean expires();
+	protected abstract boolean expires();
 
 }
